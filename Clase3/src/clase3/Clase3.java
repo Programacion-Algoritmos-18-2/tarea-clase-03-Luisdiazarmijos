@@ -18,7 +18,7 @@ public class Clase3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        double sueldos[]=new double[4];
         Scanner scanner = new Scanner(System.in);
         Trabajador1 t = new Trabajador1();
 
@@ -51,6 +51,13 @@ public class Clase3 {
         System.out.println("Ingrese el sueldo  de la cuarta semana  del trabajador");
         double d = scanner.nextDouble();
         t.agregar_sueldo(a, b, c, d);
+        for (int i = 0; i < sueldos.length; i++) {
+            System.out.printf("Ingrese el sueldo %d",i+1);
+            sueldos[i] = scanner.nextDouble();
+            
+            
+        }
+        t.agregar_sueldo(sueldos);
 
         System.out.printf("Los datos del trabajador son: %s\n", t.presentar_datos());
 
